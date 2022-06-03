@@ -1,62 +1,45 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 div {
-  border: 1px solid red;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border: 0.0625rem solid red;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8125rem;
+  gap: 0.9375rem;
 }
-
 div h1 {
-  -webkit-text-decoration: underline blue;
-          text-decoration: underline blue;
+  text-decoration: underline blue;
   color: green;
 }
-
 div section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 div section:last-child article {
   color: green;
-  border: 1px solid blue;
-  font-size: 24px;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
 }
-
 div article {
-  padding: 50px;
+  padding: 3.125rem;
 }
-
 div article:nth-child(even) {
   color: red;
-  border: 1px solid green;
+  border: 0.0625rem solid green;
   font-size: 1rem;
 }
-
 div article:nth-child(odd) {
   color: blue;
-  border: 1px solid green;
+  border: 0.0625rem solid green;
   font-size: 1rem;
 }
-
 div p {
-  padding: 0 20px 0 20px;
+  padding: 0 1.25rem 0 1.25rem;
   text-align: center;
 }
+
 /*# sourceMappingURL=style.css.map */

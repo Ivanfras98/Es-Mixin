@@ -1,50 +1,49 @@
+@use "color";
+@use "function";
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-@mixin col-bord-font ($color, $border,$font) {
-    color:$color;
-    border: 1px solid $border;
-    font-size: $font;
+@mixin col-bord-font($color, $border, $font) {
+  color: $color;
+  border: function.conv(1) solid $border;
+  font-size: $font;
 }
 
-
-$red: red;
-$blue: blue;
-$green: green;
-
 div {
-  border: 1px solid $red;
+  border: function.conv(1) solid color.$red;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  gap: 15px;
+  padding: function.conv(29);
+  gap: function.conv(15);
 
   h1 {
-    text-decoration: underline $blue;
-    color: $green;
+    text-decoration: underline color.$blue;
+    color: color.$green;
   }
 
   section {
     display: flex;
     &:last-child {
-        article {
-            @include col-bord-font($green,$blue,24px )
-        }
+      article {
+        @include col-bord-font(color.$green, color.$blue, function.conv(24));
+      }
     }
   }
   article {
-    padding: 50px;
+    padding: function.conv(50);
     &:nth-child(even) {
-        @include col-bord-font($red,$green,1rem )      
+      @include col-bord-font(color.$red, color.$green, 1rem);
     }
-    &:nth-child(odd) { @include col-bord-font($blue,$green ,1rem ) } 
+    &:nth-child(odd) {
+      @include col-bord-font(color.$blue, color.$green, 1rem);
+    }
   }
-  
+
   p {
-      padding: 0 20px 0 20px;
-      text-align: center;
+    padding: 0 function.conv(20) 0 function.conv(20);
+    text-align: center;
   }
 }
